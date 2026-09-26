@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/raw/*
+data/processed/*
+*.csv
+*.parquet
+*.zip
+
+# Models
+*.pkl
+*.joblib
+*.onnx
+
+# MLflow
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Azure credentials
+*.pem
+*.key
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+# Azure
+.azure/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
