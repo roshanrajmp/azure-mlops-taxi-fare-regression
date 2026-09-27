@@ -1,0 +1,2 @@
+model_name: boston-house-price-xgboost
+model_version: '1'

@@ -1,0 +1,22 @@
+artifact_path: /Users/test/azure-mlops-taxi-fare-regression/mlruns/1/models/m-d4048c3d148c4c178f35bf4e1b93119f/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.12
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: ubj
+    xgb_version: 3.4.1
+mlflow_version: 3.16.1
+model_id: m-d4048c3d148c4c178f35bf4e1b93119f
+model_size_bytes: 620643
+model_uuid: m-d4048c3d148c4c178f35bf4e1b93119f
+prompts: null
+run_id: dd3aaf7a601e49c4bb1cfa8594a8dad2
+utc_time_created: '2026-09-26 09:54:44.811384'

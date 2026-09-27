@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.config import (
+from config import (
     PROCESSED_DATA_FILE,
     TARGET_COLUMN,
 )
@@ -28,7 +28,7 @@ EXPECTED_COLUMNS = [
 
 def validate_data(file_path: str) -> bool:
     """
-    Validate the processed Boston housing dataset.
+    Validate the standardized Boston housing dataset.
     """
 
     path = Path(file_path)
@@ -107,7 +107,9 @@ def validate_data(file_path: str) -> bool:
 
     duplicates = df.duplicated().sum()
 
-    print(f"\nDuplicate records: {duplicates}")
+    print(
+        f"\nDuplicate records: {duplicates}"
+    )
 
     if duplicates > 0:
         print(
@@ -162,7 +164,9 @@ def validate_data(file_path: str) -> bool:
         .sum()
     )
 
-    print(f"Infinite values: {infinite_values}")
+    print(
+        f"Infinite values: {infinite_values}"
+    )
 
     if infinite_values > 0:
         raise ValueError(
@@ -176,7 +180,10 @@ def validate_data(file_path: str) -> bool:
     # ---------------------------------------------------------
 
     print("\nTarget statistics:")
-    print(df[TARGET_COLUMN].describe())
+
+    print(
+        df[TARGET_COLUMN].describe()
+    )
 
     # ---------------------------------------------------------
     # Final result
@@ -190,4 +197,5 @@ def validate_data(file_path: str) -> bool:
 
 
 if __name__ == "__main__":
+
     validate_data(PROCESSED_DATA_FILE)
